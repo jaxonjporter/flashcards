@@ -1,0 +1,15 @@
+.box {
+  min-height: 280px;
+  min-width: 400px;
+  box-shadow: 4px 4px 6px #a0a0a0;
+}
+.item:hover {
+  background-color: #efefef;
+  cursor: pointer;
+}
+body {
+  background-color: #fff3e5
+}
+.shadow {
+  box-shadow: 4px 4px 6px #a0a0a0;
+}
