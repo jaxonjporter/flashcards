@@ -1,6 +1,7 @@
 $(document).ready( function() {
-
-  var flashCards = [{front: "Function", back: "A block of code that does a specific task"}, {front: "Class", back: "Code that defines an object"}]
+  
+  var flag = true
+  var flashCards = [{front: "Function", back: "A block of code that does a specific task"}, {front: "Computer", back: "I really hope you know what a computer is"}, {front: "Phone", back: "A communication device"}]
  
 
   flashCards.forEach( function(char) {
@@ -19,6 +20,7 @@ $(document).ready( function() {
         if(name.front === stuff){
 
           $("#test").text(name.front)
+          flag = false
         }
       })
     } else {
@@ -26,20 +28,19 @@ $(document).ready( function() {
     }
   })
 
-  var flag = true
-  
+
   $(document).on('click', "#post", function() {
     let s = test.innerText
     flashCards.filter( function(name){
-      if (flag === true){
+      if (flag === false){
         if(name.front === s){
           $("#test").text(name.back)
-          flag = false
+          flag = true
         }
-      } else if (flag === false){
+      } else if (flag === true){
           if(name.back === s){
             $("#test").text(name.front)
-            flag = true
+            flag = false
           }
         }
     })
