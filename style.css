@@ -13,3 +13,7 @@ body {
 .shadow {
   box-shadow: 4px 4px 6px #a0a0a0;
 }
+
+.mid {
+  vertical-align: middle;
+}
